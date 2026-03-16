@@ -1,0 +1,66 @@
+{
+  "name": "industry-research-suite",
+  "version": "1.0.0",
+  "description": "行业最新进展调查系统 - 整合4个专业角色：市场情报、用户研究、量化分析、产品战略。提供从实时监控到战略规划的全链路行业研究能力。",
+  "triggers": [
+    "行业研究",
+    "行业调查",
+    "行业分析",
+    "市场研究",
+    "竞品分析",
+    "产品战略",
+    "用户洞察",
+    "市场情报",
+    "行业动态",
+    "产品规划",
+    "市场趋势",
+    "用户痛点",
+    "竞品监控",
+    "产品路线图"
+  ],
+  "categories": [
+    "product",
+    "market-research",
+    "competitive-intelligence",
+    "user-research"
+  ],
+  "platforms": [
+    "macos",
+    "windows",
+    "linux"
+  ],
+  "roles": {
+    "strategic_lead": {
+      "name": "首席产品战略官",
+      "skill_file": "roles/strategic_roadmap.md",
+      "triggers": ["战略", "路线图", "规划", "SWOT", "PESTEL", "波特五力", "RICE"]
+    },
+    "user_researcher": {
+      "name": "资深用户研究专家",
+      "skill_file": "roles/deep_dive_insight.md",
+      "triggers": ["用户", "痛点", "体验", "舆情", "洞察", "5 Whys", "用户画像"]
+    },
+    "analyst": {
+      "name": "高级商业分析师",
+      "skill_file": "roles/quantitative_risk.md",
+      "triggers": ["数据", "量化", "风险", "A/B", "分析", "ARPU", "留存"]
+    },
+    "intel_specialist": {
+      "name": "市场情报专员",
+      "skill_file": "roles/real_time_intel.md",
+      "triggers": ["监控", "情报", "动态", "新闻", "追踪", "OSINT"]
+    }
+  },
+  "orchestrator": {
+    "default_workflow": [
+      "intel_specialist",
+      "user_researcher",
+      "analyst",
+      "strategic_lead"
+    ],
+    "input_format": "产品领域/行业关键词",
+    "output_format": "完整的《产品迭代战略规划书》"
+  },
+  "author": "custom",
+  "license": "MIT"
+}
